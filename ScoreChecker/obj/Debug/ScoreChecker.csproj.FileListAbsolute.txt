@@ -1,0 +1,15 @@
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\bin\Debug\ScoreChecker.exe.config
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\bin\Debug\ScoreChecker.exe
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\bin\Debug\ScoreChecker.pdb
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker.csprojAssemblyReference.cache
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\MainWindow.g.cs
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\App.g.cs
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker_MarkupCompile.cache
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker_MarkupCompile.lref
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\MainWindow.baml
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker.g.resources
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker.Properties.Resources.resources
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker.csproj.GenerateResource.cache
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker.csproj.CoreCompileInputs.cache
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker.exe
+C:\Users\james\OneDrive\Documents\SCHOOL WORK\PROG8010 - SOFTWARE DEVELOPMENT\CODE\Assignments\ScoreChecker\ScoreChecker\ScoreChecker\obj\Debug\ScoreChecker.pdb

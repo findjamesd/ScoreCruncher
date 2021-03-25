@@ -1,0 +1,253 @@
+﻿<!-- James Odeyale - Group 1 -->
+    
+<Window x:Class="ScoreChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScoreChecker"
+        mc:Ignorable="d"
+        Title="Scrore Checker" Height="850" Width="1000" MinWidth="900" MinHeight="550">
+    <Window.Resources>
+        <Style TargetType="Label" x:Key="LabelStyle">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="TextBox" x:Key="TextboxStyle">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Height" Value="45" />
+        </Style>
+        <Style TargetType="ListBox" x:Key="ListBoxStyle">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Grid row definition -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <!-- Grid column definition -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- Labels for section -->
+        <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}" Content="Section 1"></Label>
+        <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelStyle}" Content="Section 2"></Label>
+        <Label Grid.Row="0" Grid.Column="2" Style="{StaticResource LabelStyle}" Content="Section 3"></Label>
+
+        <!-- Exam score section 1 -->
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="16" Content="Name" FontWeight="Bold"></Label>
+                <Label Grid.Column="1" FontSize="16" Content="Score" FontWeight="Bold"></Label>
+                <Label Grid.Column="2" FontSize="16" Content="Grade" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+            </Grid>
+        </StackPanel>
+
+        <ListBox Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" 
+                 ItemsSource="{Binding ExamScoreSection1}" Style="{StaticResource ListBoxStyle}"
+        >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="16" Content="{Binding Name}"></Label>
+                        <Label Grid.Column="1" FontSize="16" Content="{Binding Score}"></Label>
+                        <Label Grid.Column="2" FontSize="16" Content="{Binding Grade}"  HorizontalAlignment="Right"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Exam score section 2 -->
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="16" Content="Name" FontWeight="Bold"></Label>
+                <Label Grid.Column="1" FontSize="16" Content="Score" FontWeight="Bold"></Label>
+                <Label Grid.Column="2" FontSize="16" Content="Grade" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+            </Grid>
+        </StackPanel>
+
+        <ListBox  Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" ItemsSource="{Binding ExamScoreSection2}" Style="{StaticResource ListBoxStyle}"
+        >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="16" Content="{Binding Name}"></Label>
+                        <Label Grid.Column="1" FontSize="16" Content="{Binding Score}"></Label>
+                        <Label Grid.Column="2" FontSize="16" Content="{Binding Grade}"  HorizontalAlignment="Right"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Exam score section 3 -->
+        <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="16" Content="Name" FontWeight="Bold"></Label>
+                <Label Grid.Column="1" FontSize="16" Content="Score" FontWeight="Bold"></Label>
+                <Label Grid.Column="2" FontSize="16" Content="Grade" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+            </Grid>
+        </StackPanel>
+
+        <ListBox Grid.Row="2" Grid.Column="2" Grid.RowSpan="3" ItemsSource="{Binding ExamScoreSection3}" Style="{StaticResource ListBoxStyle}"
+        >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="16" Content="{Binding Name}"></Label>
+                        <Label Grid.Column="1" FontSize="16" Content="{Binding Score}"></Label>
+                        <Label Grid.Column="2" FontSize="16" Content="{Binding Grade}"  HorizontalAlignment="Right"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Highest score for section 1 -->
+        <Label Grid.Row="5" Grid.Column="0" FontSize="18" Content="Highest grade for section"
+               HorizontalContentAlignment="Center"
+               ></Label>
+
+        <Label Grid.Row="6" Grid.Column="0" FontSize="18" Content="{Binding HighestSection1}" HorizontalContentAlignment="Center"></Label>
+
+        <!-- Highest score for section 2 -->
+        <Label Grid.Row="5" Grid.Column="1" FontSize="18" Content="Highest grade for section"
+               HorizontalContentAlignment="Center"
+               ></Label>
+
+        <Label Grid.Row="6" Grid.Column="1" FontSize="18" Content="{Binding HighestSection2}" HorizontalContentAlignment="Center"></Label>
+
+        <!-- Highest score for section 3 -->
+        <Label Grid.Row="5" Grid.Column="2" FontSize="18" Content="Highest grade for section"
+               HorizontalContentAlignment="Center"
+               ></Label>
+
+        <Label Grid.Row="6" Grid.Column="2" FontSize="18" Content="{Binding HighestSection3}" HorizontalContentAlignment="Center"></Label>
+
+        <!-- Average score for section 1 -->
+        <Label Grid.Row="7" Grid.Column="0" FontSize="18" Content="Average grade for section"
+               HorizontalContentAlignment="Center"
+               ></Label>
+
+        <Label Grid.Row="8" Grid.Column="0" FontSize="18" Content="{Binding AverageScoreSection1}" HorizontalContentAlignment="Center"></Label>
+
+        <!-- Average score for section 2 -->
+        <Label Grid.Row="7" Grid.Column="1" FontSize="18" Content="Average grade for section"
+               HorizontalContentAlignment="Center"
+               ></Label>
+
+        <Label Grid.Row="8" Grid.Column="1" FontSize="18" Content="{Binding AverageScoreSection2}" HorizontalContentAlignment="Center"></Label>
+
+        <!-- Average score for section 3 -->
+        <Label Grid.Row="7" Grid.Column="2" FontSize="18" Content="Average grade for section"
+               HorizontalContentAlignment="Center"
+               ></Label>
+
+        <Label Grid.Row="8" Grid.Column="2" FontSize="18" Content="{Binding AverageScoreSection3}" HorizontalContentAlignment="Center"></Label>
+
+        <!-- Average score for all section -->
+        <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="18" Content="Average score for all section" VerticalContentAlignment="Center"></Label>
+                <Label Grid.Column="1" FontSize="18" Margin="10 0" Content="{Binding AverageOfAllSection}" VerticalContentAlignment="Center"></Label>
+            </Grid>
+        </StackPanel>
+
+        <!-- Highest score for all section -->
+        <StackPanel Orientation="Horizontal" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="18" Content="Highest score for all section" VerticalContentAlignment="Center"></Label>
+                <Label Grid.Column="1" FontSize="18" Margin="10 0" Content="{Binding HighestScoreOfAllSection}" VerticalContentAlignment="Center"></Label>
+            </Grid>
+        </StackPanel>
+
+        <!-- Lowest score for all section -->
+        <StackPanel Orientation="Horizontal" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="18" Content="Lowest score for all section" VerticalContentAlignment="Center"></Label>
+                <Label Grid.Column="1" FontSize="18" Margin="10 0" Content="{Binding LowestScoreOfAllSection}" VerticalContentAlignment="Center"></Label>
+            </Grid>
+        </StackPanel>
+
+        <!-- Button to trigger action -->
+        <StackPanel Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="CrunchData" Content="Crunch Data" Style="{StaticResource ButtonStyle}" Click="CrunchData_Click"></Button>
+                <Button Grid.Column="1" x:Name="Clear" Content="Clear Data" Style="{StaticResource ButtonStyle}" Click="Clear_Click"></Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
