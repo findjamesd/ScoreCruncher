@@ -1,4 +1,4 @@
-﻿// James Odeyale
+﻿// Group 1 - James Odeyale, Mark Dracopoulos, Ashok Chakravarthi, Aravind Kumar
 
 using System.Windows;
 

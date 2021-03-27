@@ -15,7 +15,6 @@ namespace ScoreChecker
         public string Name { get; set; }
         public int Score { get; set; }
         public GradeSystem Grade { get; set; }
-
         public override string ToString()
         {
             return $"{Name} - {Score} - {Grade}";

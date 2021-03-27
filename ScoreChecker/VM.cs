@@ -1,4 +1,4 @@
-﻿// James Odeyale - Group 1
+﻿// Group 1 - James Odeyale, Mark Dracopoulos, Ashok Chakravarthi, Aravind Kumar
 
 using System;
 using System.Collections.ObjectModel;
@@ -13,7 +13,8 @@ namespace ScoreChecker
     {
         Section1,
         Section2,
-        Section3
+        Section3,
+        Max
     }
 
     class VM : INotifyPropertyChanged
@@ -21,13 +22,14 @@ namespace ScoreChecker
         const string FILENAME_SECTION1 = "Section1.txt";
         const string FILENAME_SECTION2 = "Section2.txt";
         const string FILENAME_SECTION3 = "Section3.txt";
+        const string FILENAME_SECTION = "Section{0}.txt";
         const int MAX_SCORE = 100;
         const int GRADE_MIN_A_SCORE = 80;
         const int GRADE_MIN_B_SCORE = 70;
         const int GRADE_MIN_C_SCORE = 60;
         const int GRADE_MIN_D_SCORE = 55;
 
-        int[][] allScores = new int[3][];
+        int[][] allScores = new int[(int)Sections.Max][];
         int loopTrackerToTriggerCalculation = 0;
 
         #region Properties
@@ -77,8 +79,8 @@ namespace ScoreChecker
             set { averageScoreSection3 = value; propertyChanged(); }
         }
 
-        private double averageOfAllSection = 0d;
-        public double AverageOfAllSection
+        private string averageOfAllSection = "";
+        public string AverageOfAllSection
         {
             get => averageOfAllSection;
             set { averageOfAllSection = value; propertyChanged(); }
@@ -115,6 +117,7 @@ namespace ScoreChecker
             foreach (string scoreLine in scoreLines)
             {
                 string[] props = scoreLine.Split(new char[] { '-' });
+                
                 sectionScores[i++] = int.Parse(props[1].Trim());
 
                 ExamScore examScore = new ExamScore
@@ -184,7 +187,7 @@ namespace ScoreChecker
                         {
                             highestScoreForAllSection = highestGrade;
                             noteForHighestSection = i;
-                            highestValueMessage = $"{highestScoreForAllSection} found in Section {i + 1}";
+                            highestValueMessage = $"The highest score for all sections is {highestScoreForAllSection} found in Section {i + 1}";
                         }
                         else if (highestGrade == highestScoreForAllSection && noteForHighestSection != i)
                         {
@@ -197,7 +200,7 @@ namespace ScoreChecker
                     {
                         lowestScoreForAllSection = scores[j];
                         noteForLowestSection = i;
-                        lowestValueMessage = $"{lowestScoreForAllSection} found in Section {i + 1}";
+                        lowestValueMessage = $"The lowest score for all sections is {lowestScoreForAllSection} found in Section {i + 1}";
                     }
                     else if (scores[j] == lowestScoreForAllSection && noteForLowestSection != i)
                     {
@@ -232,7 +235,7 @@ namespace ScoreChecker
                 }
             }
 
-            AverageOfAllSection = Math.Round(totalScoreForAllSection / totalScoreCountForAllSection, 2);
+            AverageOfAllSection = $"The average score for all section is {Math.Round(totalScoreForAllSection / totalScoreCountForAllSection, 2)}";
             HighestScoreOfAllSection = highestValueMessage;
             LowestScoreOfAllSection = lowestValueMessage;
         }
@@ -247,7 +250,7 @@ namespace ScoreChecker
             return GradeSystem.F;
         }
 
-        // main function
+        // Main data crunch function
         public void Crunch()
         {
             Clear();
@@ -255,17 +258,19 @@ namespace ScoreChecker
             ReadSectionFiles(FILENAME_SECTION2, Sections.Section2);
             ReadSectionFiles(FILENAME_SECTION3, Sections.Section3);
         }
+    
+        // Clear function
         public void Clear()
         {
             HighestSection1 = 0;
             HighestSection2 = 0;
             HighestSection3 = 0;
-            
+
             AverageScoreSection1 = 0;
             AverageScoreSection2 = 0;
             AverageScoreSection3 = 0;
 
-            AverageOfAllSection = 0;
+            AverageOfAllSection = "";
             HighestScoreOfAllSection = "";
             LowestScoreOfAllSection = "";
 
